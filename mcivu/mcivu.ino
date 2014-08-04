@@ -115,7 +115,8 @@ int getScroll(String scrollCommand) {
 }
 
 
-// colour value 'A' takes precedence over any other character in the matrix
+// fact: colour value 'A' takes precedence over every other character in the matrix
+// fact: all lights are turned out provided the command as the correct prefix. this happens even before the rest of the characters in the colour matrix are processed
 void setColour(String colourMatrixCommand) {
   if (colourMatrixCommand.startsWith("CMX")) {
     String colourMatrix = colourMatrixCommand.substring(3);
@@ -150,12 +151,13 @@ void lightsOut() {
 }
 
 
+// fact: nothing changes if scroll value is invalid
 void displayText(String text, int lineNumber, int scroll) {
   lcd.setCursor(0, lineNumber);
 
-  if(scroll == 0) {
+  if (scroll == 0) {
     lcd.print(text);
-  } else {
+  } else if (scroll == 1) {
     for (int positionCounter = 0; positionCounter < text.length(); positionCounter++) {
       lcd.scrollDisplayLeft();
       delay(150);
