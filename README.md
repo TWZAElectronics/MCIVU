@@ -13,27 +13,26 @@ Keyboard Protocol
 
 Display Protocol
 ----------------------------------------
-    Format: DSP:LN(1|2):SCR(0|1):CMX([R|G|B])*:TEXT
+    Format: DSP:LN(1|2):SCR(0|1):CMX[A]([R|G|B])*:TEXT
 
     Legend:
        DSP - Display command
-       LN1 - LCD line 1 display
-       LN2 - LCD line 2 display
-       SCR - Scroll text on screen
+        LN - LCD line display
+       SCR - Scroll text on screen?
        CMX - Colour matrix indicating colour to display for each LED
-      TEXT - Text to displayC
+      TEXT - Text to display
          R - Red colour
          Y - Yellow colour
          G - Green colour
 
 
     Example 1:
-    DSP:LN1:SCR0:CMXG:SAMPLE TEXT 1
+    DSP:LN1:SCR0:CMXR:SAMPLE TEXT 1
     Display the text 'SAMPLE TEXT 1' text on line 1 and turn the 1st LED indicator red.
         
     Example 2:
-    DSP:LN2:SCR1:SAMPLE TEXT 2
-    Scroll the text 'SAMPLE TEXT 2' on line 2
+    DSP:LN2:SCR1:CMXA:SAMPLE TEXT 2
+    Scroll the text 'SAMPLE TEXT 2' on line 2 and make all LEDs green
         
     Example 3:
     DSP:LN1:SCR1:CMXGGGY:SAMPLE TEXT 3
