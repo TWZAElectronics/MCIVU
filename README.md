@@ -13,9 +13,9 @@ Keyboard Protocol
 
 Display Protocol
 ----------------------------------------
-Format: DSP:LN{1|2}:[SCR:][COL{R|Y|G}|CMX-{[R|G|B]}*]:TEXT
+  Format: DSP:LN{1|2}:[SCR:][COL{R|Y|G}|CMX-{[R|G|B]}*]:TEXT
 
-Legend:
+  Legend:
      DSP - Display command
      LN1 - LCD line 1 display
      LN2 - LCD line 2 display
