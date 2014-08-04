@@ -13,7 +13,7 @@ Keyboard Protocol
 
 Display Protocol
 ----------------------------------------
-    Format: DSP:LN(1|2):SCR(0|1):CMX[A]([R|G|B])*:TEXT
+    Format: DSP:LN(1|2):SCR(0|1):CMX[A]|([R|G|B])*:TEXT
 
     Legend:
        DSP - Display command
