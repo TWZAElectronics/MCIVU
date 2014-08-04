@@ -27,7 +27,7 @@ Display Protocol
          Y - Yellow colour
          G - Green colour
          
-    Example 1: 
+    **Example 1:**
     -------------------------------
     DSP:LN1:COLG:SAMPLE TEXT 1
     Display the text 'SAMPLE TEXT 1' text on line 1 and turn the 1st LED indicator red.
