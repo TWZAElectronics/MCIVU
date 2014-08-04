@@ -20,9 +20,8 @@ Display Protocol
        LN1 - LCD line 1 display
        LN2 - LCD line 2 display
        SCR - Scroll text on screen
-       COL - LED colour indicator
        CMX - Colour matrix indicating colour to display for each LED
-      TEXT - Text to display
+      TEXT - Text to displayC
          R - Red colour
          Y - Yellow colour
          G - Green colour
