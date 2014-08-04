@@ -13,7 +13,7 @@ Keyboard Protocol
 
 Display Protocol
 ----------------------------------------
-    Format: DSP:LN(1|2):[SCR:](COL(R|Y|G)|CMX-(R|G|B)*):TEXT
+    Format: DSP:LN(1|2):[SCR:]CMX([R|G|B])*:TEXT
 
     Legend:
        DSP - Display command
@@ -29,7 +29,7 @@ Display Protocol
 
 
     Example 1:
-    DSP:LN1:COLG:SAMPLE TEXT 1
+    DSP:LN1:CMXG:SAMPLE TEXT 1
     Display the text 'SAMPLE TEXT 1' text on line 1 and turn the 1st LED indicator red.
         
     Example 2:
@@ -37,5 +37,5 @@ Display Protocol
     Scroll the text 'SAMPLE TEXT 2' on line 2
         
     Example 3:
-    DSP:LN1:SCR:CMX-GGGY:SAMPLE TEXT 3
+    DSP:LN1:SCR:CMXGGGY:SAMPLE TEXT 3
     Scroll the text 'SAMPLE TEXT 3' on line 1, turn the 1st, 2nd, 3rd and 4th LEDs Green, Green, Green and Yellow respectively
