@@ -61,7 +61,6 @@ char *getKeyboardReading(int keyboardReading) {
 }
 
 
-// fact: command is retried 10 times until an 'ACK' message is received from the connecting peripheral
 void sendCommand(String command) {
   Serial.println(command);
   delay(1500);
