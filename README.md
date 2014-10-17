@@ -38,3 +38,5 @@ Display Protocol
     Example 3:
     DSP:LN1:SCR1:CMXGGGY:SAMPLE TEXT 3
     Scroll the text 'SAMPLE TEXT 3' on line 1, turn the 1st, 2nd, 3rd and 4th LEDs Green, Green, Green and Yellow respectively
+
+    Note: Scrolls text only when text is longer that 16 characters.

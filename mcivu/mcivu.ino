@@ -9,8 +9,6 @@ int backlightPin = 13;
 int numberOfPipelines = 5;
 char DELIMETER = ':';
 
-char *inData;
-
 void setup() {
   lcd.begin(16, 2);
   pinMode(backlightPin, OUTPUT);
@@ -180,13 +178,14 @@ void lightsOut() {
   return;
 }
 
-
+//fact: scroll text only when text is longer than 16 characters
 void displayText(String text, int lineNumber, int scroll) {
   lcd.setCursor(0, lineNumber);
+  lcd.clear();
   lcd.print(text);
   delay(2000);
 
-  if(scroll == 1) {
+  if(scroll == 1 && text.length() > 16) {
     for (int positionCounter = 0; positionCounter < text.length(); positionCounter++) {
       lcd.scrollDisplayLeft();
       delay(500);
@@ -196,6 +195,7 @@ void displayText(String text, int lineNumber, int scroll) {
   }
 
   lcd.setCursor(0, lineNumber);
+  lcd.clear();
   lcd.print(text);
 }
 
@@ -203,6 +203,7 @@ void loop() {
   keyboardReading = getKeyboardReading(analogRead(keyboardReadPin));
   if(strcmp(keyboardReading, "CMD_READY") != 0 && strcmp(keyboardReading, "UNKNOWN") != 0) {
     sendCommand(keyboardReading);
+    char *inData;
     inData = readSerialPort();
     processCommand(inData);
   }
